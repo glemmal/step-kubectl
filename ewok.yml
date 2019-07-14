@@ -7,6 +7,12 @@ build:
         - script:
             name: install apk packages
             code: apk update && apk add ca-certificates openssh curl
+        
+        - script:
+            name: echo python information
+            code: |
+            echo "python version $(python --version) running"
+            echo "pip version $(pip --version) running"
 
         - script:
             name: config
