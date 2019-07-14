@@ -63,3 +63,14 @@ build:
                 chmod ugo+rx "$WERCKER_OUTPUT_DIR/${GCLOUD_DIRNAME}/bin/gcloud"
                 rm -rf "${GCLOUD_DIRNAME}/platform/gsutil"
                 rm -rf "${GCLOUD_DIRNAME}/platform/bq"
+
+        - script:
+            name: Compress kubectl
+            code: |
+                ${UPX_DIRNAME}/upx "$WERCKER_OUTPUT_DIR/${GCLOUD_DIRNAME}/bin/kubectl"
+
+        - script:
+            name: Measure output folder
+            code: |
+                du -csh $WERCKER_OUTPUT_DIR/*
+                du -csh $WERCKER_OUTPUT_DIR/${GCLOUD_DIRNAME}/*
