@@ -11,7 +11,7 @@ build:
         - script:
             name: config
             code: |
-                GCLOUD_VERSION="151.0.0-linux-x86_64"
+                GCLOUD_VERSION="253.0.0-linux-x86_64"
                 export GCLOUD_DIRNAME="google-cloud-sdk"
                 export GCLOUD_SHA="53caea9133e3ed0efe26164e8a29751a3caf770f"
                 export GCLOUD_FILENAME="${GCLOUD_DIRNAME}-${GCLOUD_VERSION}.tar.gz"
