@@ -45,7 +45,7 @@ build:
         - script:
             name: Validate gcloud archive
             code: |
-                sha1sum ${GCLOUD_FILENAME} | grep -q "${GCLOUD_SHA}"
+                sha256sum ${GCLOUD_FILENAME} | grep -q "${GCLOUD_SHA}"
 
         - script:
             name: Extract gcloud archive
