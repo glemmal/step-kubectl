@@ -1,6 +1,6 @@
 name: kubectl
 version: 3.1.9
-description: Step to run kubectl, with support for GKE clusters.
+summary: Step to run kubectl, with support for GKE clusters.
 keywords:
   - kubernetes
   - kubectl
