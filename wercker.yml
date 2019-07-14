@@ -68,3 +68,7 @@ build:
             code: |
                 du -csh $WERCKER_OUTPUT_DIR/*
                 du -csh $WERCKER_OUTPUT_DIR/${GCLOUD_DIRNAME}/*
+
+publish:
+    - internal/publish-step:
+        owner: betweeen
