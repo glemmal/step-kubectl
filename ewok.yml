@@ -69,17 +69,6 @@ build:
                 chmod ugo+rx "$WERCKER_OUTPUT_DIR/${GCLOUD_DIRNAME}/bin/gcloud"
                 rm -rf "${GCLOUD_DIRNAME}/platform/gsutil"
 
-        # - script:
-        #     name: Compress kubectl
-        #     code: |
-        #         ${UPX_DIRNAME}/upx -1 "$WERCKER_OUTPUT_DIR/${GCLOUD_DIRNAME}/bin/kubectl"
-
-        - script:
-            name: Measure output folder
-            code: |
-                du -csh $WERCKER_OUTPUT_DIR/*
-                du -csh $WERCKER_OUTPUT_DIR/${GCLOUD_DIRNAME}/*
-
 test-busybox:
     box:
       id: busybox
