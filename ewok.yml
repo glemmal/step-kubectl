@@ -15,8 +15,7 @@ build:
                 export GCLOUD_SHA="df3834e538025b257b7cc5d6e7518ca16f05e99aa82671dda19045e688b5268a"
                 export GCLOUD_FILENAME="${GCLOUD_DIRNAME}-${GCLOUD_VERSION}.tar.gz"
                 export GCLOUD_URL="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/${GCLOUD_FILENAME}"
-                export UPX_VERSION="3.93"
-                export UPX_SHA="db4ec36b930e7d7e082d93124a59d38fbaedd1c0"
+                export UPX_VERSION="3.95"
                 export UPX_DIRNAME="upx-${UPX_VERSION}-amd64_linux"
                 export UPX_FILENAME="${UPX_DIRNAME}.tar.xz"
                 export UPX_URL="https://github.com/upx/upx/releases/download/v${UPX_VERSION}/${UPX_FILENAME}"
@@ -25,11 +24,6 @@ build:
             name: fetch upx
             code: |
                 curl -L ${UPX_URL} -o ${UPX_FILENAME}
-
-        - script:
-            name: validate upx archive
-            code: |
-                sha1sum ${UPX_FILENAME} | grep -q "${UPX_SHA}"
 
         - script:
             name: Extract upx archive
