@@ -4,12 +4,6 @@ build:
         - shellcheck
 
         - script:
-            name: echo python information
-            code: |
-            echo "python version $(python --version) running"
-            echo "pip version $(pip --version) running"
-
-        - script:
             name: config
             code: |
                 GCLOUD_VERSION="253.0.0-linux-x86_64"
